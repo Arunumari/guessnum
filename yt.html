@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>arun</title>
+    </head>
+    <body>
+        <h1>guess the number</h1>
+        <input id="input" type="number" placeholder="emter the number">
+        <button id="btn" onclick="check()">check</button>
+        <h2 id="para1">the number is right oe wromg</h2>
+        <h2 id="para2">score=0</h2>
+        <script>
+            var inp=document.getElementById("input")
+            var but=document.getElementById("btn")
+            var par=document.getElementById("para1")
+            var para=document.getElementById("para2")
+            var guessnum=2
+            var score=0
+            function check(){
+                var num=inp.value
+                if(guessnum==num){
+                    console.log("right")
+                    par.textContent="right"
+                    alert("you won ak")
+                    score++
+                    para.textContent="score:" +score
+                }
+                else{
+                    console.log("wrong")
+                    par.textContent="wrong"
+                    alert("wrong")
+                }
+            }
+        </script>
+    </body>
+</html>
